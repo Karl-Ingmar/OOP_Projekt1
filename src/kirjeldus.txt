@@ -1,0 +1,16 @@
+Programm, mis küsib diskreetse matemaatika kursusel vajaminevaid samaväärsusi.
+
+Klassid:
+Abstraktne klass Samaväärused
+Klass LASV (lausearvutuse põhisamaväärsused) extends Samaväärsused
+Klass PS (predikaatloogika põhisamaväärsused) extends Samaväärsused
+Peaklass
+
+Kasutajalt küsitakse, millist testi ta soovib teha.
+Kasutajal on kaks valikut:
+test lausearvutuse põhisamaväärsuste peale (10 küsimust)
+test predikaatloogika põhisamaväärsuste peale (10 küsimust)
+Vastavalt testi valikule väärtustatakse valitud klassi isend konstruktori abil küsimuste ja vastuste listiga ning skooriga (skoor=0).
+
+Mõlemal juhul võetakse kümme küsimust suvalises järjekorras vastava klassi
+küsimuste listist, kusjuures küsitud küsimuse indeks jäetakse meelde ning seda enam ei küsita.
