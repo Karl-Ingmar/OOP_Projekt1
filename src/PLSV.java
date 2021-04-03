@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class PLSV extends Samaväärsused{
-    List<String> küsimused;
+
 
     public PLSV(List<String> küsimused, List<String> vastused, int skoor) {
         super(küsimused, vastused, skoor);
@@ -9,6 +9,6 @@ public class PLSV extends Samaväärsused{
 
     @Override
     public List<String> getKüsimused() {
-        return küsimused;
+        return super.Küsimused;
     }
 }

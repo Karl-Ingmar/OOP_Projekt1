@@ -1,7 +1,10 @@
 import java.util.List;
 
+//Pm on klassid LASV ja PLSV üleliigsed praegu. Kui me nende meetodite juures midagi ei muuda,
+// siis saaks ilma nendeta hakkama
+
 public class LASV extends Samaväärsused{
-    List<String> küsimused;
+
 
     public LASV(List<String> küsimused, List<String> vastused, int skoor) {
         super(küsimused, vastused, skoor);
@@ -10,6 +13,6 @@ public class LASV extends Samaväärsused{
 
     @Override
     public List<String> getKüsimused() {
-        return küsimused;
+        return super.Küsimused;
     }
 }
