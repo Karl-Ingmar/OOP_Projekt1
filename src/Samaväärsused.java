@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Scanner;
 
 abstract class Samaväärsused {
     List<String> Küsimused;
@@ -20,12 +21,15 @@ abstract class Samaväärsused {
             System.out.println("Vale vastus.\n Õige vastus on: "+ vastused.get(indeks));
         }
         return indeks;
-    };
+    }
 
-    public String küsiJaTagasta(String küsimus) {
+    protected abstract String küsiJaTagasta(String s);
+
+    ;
+
+    public String küsiJaTagasta(String küsimus, String kasutajaVastus) {
         //Prindib küsimuse, tagastab kasutaja vastuse
         System.out.println(küsimus);
-        String kasutajaVastus="";
         return kasutajaVastus;
     }
 
