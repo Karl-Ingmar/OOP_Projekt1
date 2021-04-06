@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 
 public class PLSV extends Samaväärsused{
@@ -7,8 +8,4 @@ public class PLSV extends Samaväärsused{
         super(küsimused, vastused, skoor);
     }
 
-    @Override
-    public List<String> getKüsimused() {
-        return super.Küsimused;
-    }
 }

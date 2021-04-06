@@ -2,48 +2,62 @@ import java.util.List;
 import java.util.Scanner;
 
 abstract class Samaväärsused {
-    List<String> Küsimused;
-    List<String> Vastused;
+    List<String> küsimused;
+    List<String> vastused;
     //Küsimusele vastav vastus on sama indeksiga, mis küsimus
     private int skoor;
-    public int suvalineKüsimus(List<String> küsimused, List<String> vastused, int skoor){
-        //kasutab Math.randomit indeksi genereerimisel (int küsimuseIndeks)
-        //väljastab kasutajale küsimuse
-        //pärast kasutaja vastamist kutsub välja meetodi kontrolli(küsimuseIndeks)
-        //vastavalt meetodi tagastatud tõeväärtusele siis lisab skoorile punkti või mitte
+
+    public Samaväärsused(List<String> küsimused, List<String> vastused, int skoor) {
+        this.küsimused = küsimused;
+        this.vastused = vastused;
+        this.skoor = skoor;
+    }
+
+    public void suvalineKüsimus(){
+
         //Tagastatakse genereeritud indeks, mida kasutame peameetodis selleks et küsitud küsimus/vastus listidest välja visata
-        int indeks = (int)(Math.random()* küsimused.size());
-        String kasutajaVastus = küsiJaTagasta(küsimused.get(indeks));
-        if (kasutajaVastus.equals(vastused.get(indeks))){
+        int indeks = suvalineIndeks();
+        String küsimus = võtaküsimuses(indeks);
+        String vastus = võtavastus(indeks);
+
+
+        String kasutajaVastus = küsiJaTagasta(küsimus);
+        if (kasutajaVastus.equals(vastus)){
             setSkoor(skoor+1);
             System.out.println("Õige vastus!");
         }else{
-            System.out.println("Vale vastus.\n Õige vastus on: "+ vastused.get(indeks));
+            System.out.println("Vale vastus.\n Õige vastus on: "+ vastus);
         }
-        return indeks;
+
     }
 
-    protected abstract String küsiJaTagasta(String s);
 
-    ;
-
-    public String küsiJaTagasta(String küsimus, String kasutajaVastus) {
+//Prindi küsimus ja küsi vastus
+    public String küsiJaTagasta(String küsimus) {
         //Prindib küsimuse, tagastab kasutaja vastuse
         System.out.println(küsimus);
-        return kasutajaVastus;
+        Scanner userVastus= new Scanner(System.in);
+        String vastus = userVastus.nextLine();
+        userVastus.close();
+        return vastus;
+    }
+    // Võtab suvalise arvu küsimuste listi suurusest
+    private int suvalineIndeks(){
+        return (int)(Math.random()* küsimused.size());
+    }
+    // eelnevalt suvaliselt genereeritud numbriga võtab indeksi küsimuste listist
+    private String võtaküsimuses(int indeks){
+        return küsimused.get(indeks);
+    }
+    private String võtavastus(int indeks){
+        return vastused.get(indeks);
     }
 
     public void setSkoor(int skoor) {
         this.skoor = skoor;
     }
 
-    public Samaväärsused(List<String> küsimused, List<String> vastused, int skoor) {
-        this.Küsimused = küsimused;
-        this.Vastused = vastused;
-        this.skoor = skoor;
-    }
-
-    public List<String> getKüsimused() {
-        return Küsimused;
+    public int getSkoor() {
+        return skoor;
     }
 }

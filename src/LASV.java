@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 
 //Pm on klassid LASV ja PLSV üleliigsed praegu. Kui me nende meetodite juures midagi ei muuda,
@@ -11,8 +12,4 @@ public class LASV extends Samaväärsused{
     }
 
 
-    @Override
-    public List<String> getKüsimused() {
-        return super.Küsimused;
-    }
 }
