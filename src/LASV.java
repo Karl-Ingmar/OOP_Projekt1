@@ -8,6 +8,7 @@ public class LASV extends Samaväärsused{
 
 
     public LASV(List<String> küsimused, List<String> vastused, int skoor) {
+
         super(küsimused, vastused, skoor);
     }
 

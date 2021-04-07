@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-abstract class Samaväärsused {
+public abstract class Samaväärsused {
     List<String> küsimused;
     List<String> vastused;
     //Küsimusele vastav vastus on sama indeksiga, mis küsimus
@@ -13,22 +13,20 @@ abstract class Samaväärsused {
         this.skoor = skoor;
     }
 
-    public void suvalineKüsimus(){
+    public int suvalineKüsimus(int pikkus){
 
         //Tagastatakse genereeritud indeks, mida kasutame peameetodis selleks et küsitud küsimus/vastus listidest välja visata
-        int indeks = suvalineIndeks();
+        int indeks = suvalineIndeks(pikkus);
         String küsimus = võtaküsimuses(indeks);
         String vastus = võtavastus(indeks);
-
-
         String kasutajaVastus = küsiJaTagasta(küsimus);
-        if (kasutajaVastus.equals(vastus)){
-            setSkoor(skoor+1);
+        if (kasutajaVastus.equals(vastus)) {
+            setSkoor(skoor + 1);
             System.out.println("Õige vastus!");
         }else{
             System.out.println("Vale vastus.\n Õige vastus on: "+ vastus);
         }
-
+        return indeks;
     }
 
 
@@ -37,13 +35,13 @@ abstract class Samaväärsused {
         //Prindib küsimuse, tagastab kasutaja vastuse
         System.out.println(küsimus);
         Scanner userVastus= new Scanner(System.in);
-        String vastus = userVastus.nextLine();
-        userVastus.close();
+        String vastus =  userVastus.nextLine();
+ //       userVastus.close();  //tekitas vea - pärast esimest loopi tõlgendas kasutaja vastust kui 'null'
         return vastus;
     }
     // Võtab suvalise arvu küsimuste listi suurusest
-    private int suvalineIndeks(){
-        return (int)(Math.random()* küsimused.size());
+    private int suvalineIndeks(int pikkus){
+        return (int)(Math.random()* pikkus);
     }
     // eelnevalt suvaliselt genereeritud numbriga võtab indeksi küsimuste listist
     private String võtaküsimuses(int indeks){
