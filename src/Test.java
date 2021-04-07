@@ -10,14 +10,14 @@ public class Test {
             int pikkus = vastused.size();
             System.out.println("Järgmine küsimus (next), Skoor (sf), Katkesta(exit)");
             String vastus = UserVastus.nextLine();
-            if (vastus.equals("next")) {
+            if (vastus.equals("next")) {//järgmine küsimus
                 int indeks = samaväärsus.suvalineKüsimus(pikkus); //prindib küsimuse ja annab indeksi
                 küsimused.remove(indeks); //ei korda sama küsimust hiljem
                 vastused.remove(indeks);
                 i++;
-            } else if (vastus.equals("sf")) {
+            } else if (vastus.equals("sf")) {//prindib skoori
                 System.out.println("Skoor: " + samaväärsus.getSkoor());
-            } else if (vastus.equals("exit")) {
+            } else if (vastus.equals("exit")) {//väljub programmist
                 return;
             }
 

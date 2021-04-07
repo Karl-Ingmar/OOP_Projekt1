@@ -7,7 +7,7 @@ import static java.lang.System.in;
 public class Peaklass {
 
     public static void main(String[] args) {
-        Scanner UserVastus= new Scanner(System.in);
+        Scanner UserVastus= new Scanner(System.in);//teemade listid  küsimused ja vastused
 
         List<String> lasv_küsimused = Arrays.asList("F&F≡","F∨F≡","F&G≡ (kommutatiivsus)","F∨G ≡", "(F&G)&H", "(F∨G)∨H≡",
                 "F&(F∨G)≡", "F∨F&G≡", "F&(G∨H)≡", "F∨G&H≡", "¬(F&G)≡", "¬(F∨G)≡", "F⇒G≡ (konjunktsiooni kaudu)", "F⇒G ≡(disjunktsiooni kaudu)", "F&G≡(implikatsiooni kaudu)",
@@ -31,8 +31,7 @@ public class Peaklass {
         List<String>  definitsioonid_vastused = Arrays.asList("ruutmaatriks","0","ühikmaatriksiks", "singulaarseks", "regulaarne",
                 "0", "vastuoluliseks", "y", "1", "e", "0", "(u'v-uv')/v**2");
 
-        System.out.println(lasv_küsimused.size());
-        System.out.println(lasv_vastused.size());
+
         //Et tahame hiljem listist eemaldada elemente, siis -
         List<String> lasvKüsimused = new LinkedList<String>();
         List<String> plsvKüsimused = new LinkedList<String>();

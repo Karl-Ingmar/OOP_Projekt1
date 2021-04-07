@@ -1,10 +1,13 @@
-Programm, mis küsib diskreetse matemaatika kursusel vajaminevaid samaväärsusi.
+Programm, mis küsib diskreetse matemaatika kursusel vajaminevaid samaväärsusi ja lihtsamad definitsioonid varasemalt õpitu meeldetuletamiseks (Kõrgem matemaatika I).
 
+Autorid:
+Kevin Kirbits
+Karl-Ingmar Adamson
 Klassid:
 Abstraktne klass Samaväärused
 Klass LASV (lausearvutuse põhisamaväärsused) extends Samaväärsused
 Klass PS (predikaatloogika põhisamaväärsused) extends Samaväärsused
-Klass DEF (definitsioonid põhisamaväärsused) extends Samaväärsused
+Klass DEF (definitsioonid) extends Samaväärsused
 Peaklass
 
 Kasutajalt küsitakse, millist testi ta soovib teha.
@@ -16,3 +19,20 @@ Vastavalt testi valikule väärtustatakse valitud klassi isend konstruktori abil
 
 Igal juhul võetakse kümme küsimust suvalises järjekorras vastava klassi
 küsimuste listist, kusjuures küsitud küsimuse indeks jäetakse meelde ning seda enam ei küsita.
+
+Hinnang:
+Projekt aitas läbi töötada varasemalt õpitut ja aitas puuduolevad teadmised tasa teha.
+
+Tegemise mured:
+
+Mured olid üpriski väiksed, peamiselt väiksed vead koodis, mis ei võimaldanud programmil töötada nii nagu soovitud oli.
+Kuid kõik lahenes
+
+Programmi testimised:
+
+algselt kui Samaväärsuste klass ja LSV klass said valmis, siis peaklassis testisime, kas programm kuvab küsimuse ette või mitte. Kui jah, siis kas sisestatud vastuse loeb õigeks ja salvestab skoori.
+
+Panus ja ajakulu:
+
+Panus oli üldiselt võrdne, sest igas klassis oli vaja parandusi teha, ehk varieerus tihti selle vahel, et üks lõi klassid ja meetodid ja teine neid kas parandas või kohandas.
+
