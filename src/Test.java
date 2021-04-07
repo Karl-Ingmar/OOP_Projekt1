@@ -17,7 +17,7 @@ public class Test {
                 i++;
             } else if (vastus.equals("sf")) {
                 System.out.println("Skoor: " + samaväärsus.getSkoor());
-            } else if (vastus.equals("Exit")) {
+            } else if (vastus.equals("exit")) {
                 return;
             }
 
