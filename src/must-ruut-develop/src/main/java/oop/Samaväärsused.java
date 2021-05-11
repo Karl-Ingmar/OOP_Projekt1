@@ -1,3 +1,5 @@
+package oop;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,18 +21,11 @@ public abstract class Samaväärsused {
         int indeks = suvalineIndeks(pikkus);
         String küsimus = võtaküsimuses(indeks);
         String vastus = võtavastus(indeks);
-        String kasutajaVastus = küsiJaTagasta(küsimus);
-        if (kasutajaVastus.equals(vastus)) {
-            setSkoor(skoor + 1);
-            System.out.println("Õige vastus!");
-        }else{
-            System.out.println("Vale vastus.\n Õige vastus on: "+ vastus);
-        }
         return indeks;
     }
 
 
-//Prindi küsimus ja küsi vastus
+    //Prindi küsimus ja küsi vastus
     public String küsiJaTagasta(String küsimus) {
         //Prindib küsimuse, tagastab kasutaja vastuse
         System.out.println(küsimus);
@@ -56,5 +51,13 @@ public abstract class Samaväärsused {
 
     public int getSkoor() {
         return skoor;
+    }
+
+    public String kontrolliVastus(String kontrollitav, String õige){
+        if(kontrollitav.equals(õige)){
+            skoor++;
+            return "Õige vastus!";
+        }else
+            return "Vale vastus!";
     }
 }

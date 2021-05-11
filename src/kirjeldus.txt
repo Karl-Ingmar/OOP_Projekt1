@@ -1,38 +1,99 @@
-Programm, mis küsib diskreetse matemaatika kursusel vajaminevaid samaväärsusi ja lihtsamad definitsioonid varasemalt õpitu meeldetuletamiseks (Kõrgem matemaatika I).
+
+Programm, mis küsib diskreetse matemaatika kursusel vajaminevaid samaväärsusi ja lihtsamad definitsioonid varasemalt õpitu meeldetuletamiseks kursuselt Kõrgem matemaatika I.
 
 Autorid:
+
 Kevin Kirbits
 Karl-Ingmar Adamson
+
+Eesmärk:
+Aidata kasutajal õppida definitsioone Kõrgemast Matemaatikast või loogilisi põhisamaväärsusi diskreetsest matemaatikast.
+
 Klassid:
-Abstraktne klass Samaväärused
+
+Klass Test:
+Siin klassis toimub põhiosa programmi tööst. Küsimusi tuleb kümme tükki või kui kasutaja soovib enneagselt vastamise lõpetada, siis vähem. Lisaks on võimalik kuvada skoor.
+
+Abstraktne klass Samaväärused:
+Siin klassis on suurem osa küsimuste küsimisel rakendatavaid meetodeid. Meetod suvalineKüsimus ja selle abimeetodid küsib 
+meetodi Math.random() abil suvaliselt genereeritud indeksile vastava küsimuse. Lisaks on get ja set meetodid skoori kuvamiseks ja muutmiseks.
+
 Klass LASV (lausearvutuse põhisamaväärsused) extends Samaväärsused
-Klass PS (predikaatloogika põhisamaväärsused) extends Samaväärsused
+
+
+Klass PLSV (predikaatloogika põhisamaväärsused) extends Samaväärsused
 Klass DEF (definitsioonid) extends Samaväärsused
-Peaklass
+
 
 Kasutajalt küsitakse, millist testi ta soovib teha.
+
+
 Kasutajal on kolm valikut:
-test lausearvutuse põhisamaväärsuste peale (10 küsimust)
-test predikaatloogika põhisamaväärsuste peale (10 küsimust)
-test lihtsamate definitsioonide peale peale (10 küsimust)
+
+
+a) test lausearvutuse põhisamaväärsuste peale (10 küsimust)
+
+b) test predikaatloogika põhisamaväärsuste peale (10 küsimust)
+
+c)test lihtsamate definitsioonide peale peale (10 küsimust)
+
+
 Vastavalt testi valikule väärtustatakse valitud klassi isend konstruktori abil küsimuste ja vastuste listiga ning skooriga (skoor=0).
 
+
 Igal juhul võetakse kümme küsimust suvalises järjekorras vastava klassi
-küsimuste listist, kusjuures küsitud küsimuse indeks jäetakse meelde ning seda enam ei küsita.
+küsimuste listist, kusjuures küsitud küsimus eemaldatakse listist ning seda enam ei küsita.
+
+
+
+Protsess:
+Idee väljatöötamine,
+Esialgne klasside ja meetodite kavandamine,
+Kava täiendamine,
+Kava realiseerimine,
+Kasutajaliidese loomine,
+Testimine,
+Andmete sisestamine (küsimused, vastused),
+Täiendav testimine.
+
+Idee autor tegi ka esialgse jämeda kavandi,  mille abil oli võimalik ideed tutvustada ka teisele rühmaliikmele. 
+Edasine toimus mõlema liikme ühistööna.
+
 
 Hinnang:
+
+
 Projekt aitas läbi töötada varasemalt õpitut ja aitas puuduolevad teadmised tasa teha.
+Enesehinnang programmile on väga hea, sest kõik seatud eesmärgid said täidetud ning tulemus oli ootuspärane.
+Arendamise koht võiks olla näiteks programmi paindlikkuse suurendamine. Küsimused-vastused võiksid olla lihtsalt 
+sisestatavad ja programm võiks põhimõtteliselt töötada küsimustega igast vallast.
+
+
 
 Tegemise mured:
 
-Mured olid üpriski väiksed, peamiselt väiksed vead koodis, mis ei võimaldanud programmil töötada nii nagu soovitud oli.
-Kuid kõik lahenes
+Mured olid üpriski väikesed, peamiselt väikesed vead koodis, mis ei võimaldanud programmil töötada nii nagu soovitud oli.
+Kuid kõik lahenes.
+
+
 
 Programmi testimised:
 
-algselt kui Samaväärsuste klass ja LSV klass said valmis, siis peaklassis testisime, kas programm kuvab küsimuse ette või mitte. Kui jah, siis kas sisestatud vastuse loeb õigeks ja salvestab skoori.
+Algselt kui Samaväärsuste klass ja LSV klass said valmis, siis peaklassis testisime, kas programm kuvab küsimuse ette või mitte. 
+Kui jah, siis kas sisestatud vastuse loeb õigeks ja salvestab skoori.
+
+
 
 Panus ja ajakulu:
 
 Panus oli üldiselt võrdne, sest igas klassis oli vaja parandusi teha, ehk varieerus tihti selle vahel, et üks lõi klassid ja meetodid ja teine neid kas parandas või kohandas.
+
+Kevin - ~20h (Meetodite täiendamine, Klassi Test sisu väljatöötamine, Kasutajaliidese väljatöötamine, testimine)
+Oluline osa projektile kulunud ajast läks teadmiste tasa tegemisele.
+
+Karl-Ingmar - ~10h (Idee, mustand sh mõned tähtsama meetodi algsed variandid, erinevad parandused täiendused, struktuuri korrigeerimine)
+
+Kuigi ajaline panus oli märkimisväärselt erinev, siis panus programmi kirjutamise seisukohalt oli võrdne.  
+
+
 
